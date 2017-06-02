@@ -1,0 +1,15 @@
+bootstrap_url: http://{% for host in groups['bootstrap'] -%}
+{{ hostvars[host]['ansible_eth0']['ipv4']['address'] }}
+{% endfor -%}
+cluster_name: Test-Cluster
+customer_key: 12345-12345-12345-12345-12345-123456
+exhibitor_storage_backend: static
+master_discovery: static
+master_list:
+{% for host in groups['masters'] %}
+- {{ hostvars[host]['ansible_eth0']['ipv4']['address'] }}
+{% endfor %}
+resolvers:
+- 169.254.169.253
+- 8.8.8.8
+security: disabled

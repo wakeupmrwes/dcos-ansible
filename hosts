@@ -1,0 +1,17 @@
+[bootstrap]
+10.0.0.223
+
+[masters]
+10.0.0.238
+
+[public-agents]
+10.0.0.109
+
+[private-agents]
+10.0.0.191
+10.0.0.126
+
+[dcos-cluster:children]
+masters
+public-agents
+private-agents
