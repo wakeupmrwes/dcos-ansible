@@ -1,5 +1,6 @@
 ---
 - name: Top level play for the entire installation
+  hosts: all
 
 - include: playbooks/selinux.yaml
 - include: playbooks/groups.yaml
