@@ -4,11 +4,6 @@
   become: true
 
   tasks:
-  - name: Create nogroup system group
-    group:
-      name: nogroup
-      system: yes
-
   - name: Add official Docker yum repository
     yum_repository:
       name: docker
@@ -50,14 +45,9 @@
     yum:
       name: docker-engine-1.13.1, docker-engine-selinux-1.13.1
       state: present
-      
+
   - name: Start and enable Docker
     systemd:
       name: docker
       state: started
       enabled: True
-
-  - name: Install utility dependencies
-    yum:
-      name: tar, xz, unzip, curl, ipset, docker-python
-      state: present
