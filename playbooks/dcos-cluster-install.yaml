@@ -5,7 +5,7 @@
   tasks:
   - name: Fetch DC/OS installer from Bootstrap Node
     get_url:
-      url: http://{{ hostvars[groups['bootstrap'][0].ansible_eth0['ipv4']['address'] }}/dcos_install.sh
+      url: http://{{ hostvars[groups['bootstrap'][0]].ansible_eth0['ipv4']['address'] }}/dcos_install.sh
       dest: /tmp/dcos
 
 - hosts: masters
