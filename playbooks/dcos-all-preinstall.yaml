@@ -6,7 +6,7 @@
   tasks:
   - name: Create genconf directory
     file:
-      path: /home/centos/genconf
+      dest: /home/centos/genconf
       state: directory
       mode: 0755
 
@@ -17,6 +17,6 @@
 
   - name: Create /tmp/dcos
     file:
-      path: /tmp/dcos
+      dest: /tmp/dcos
       state: directory
       mode: 0755

@@ -15,7 +15,7 @@
 
   - name: Enable OverlayFS
     lineinfile:
-      path: /etc/modules-load.d/overlay.conf
+      dest: /etc/modules-load.d/overlay.conf
       state: present
       create: yes
       line: 'overlay'
@@ -27,13 +27,13 @@
 
   - name: Create Docker service config directory
     file:
-      path: /etc/systemd/system/docker.service.d
+      dest: /etc/systemd/system/docker.service.d
       state: directory
       mode: 0755
 
   - name: Configure Docker to use OverlayFS
     blockinfile:
-      path: /etc/systemd/system/docker.service.d/override.conf
+      dest: /etc/systemd/system/docker.service.d/override.conf
       state: present
       create: yes
       block: |
