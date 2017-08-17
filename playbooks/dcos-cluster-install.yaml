@@ -36,4 +36,4 @@
   - name: Installation of private agents
     async: 600
     poll: 0
-    shell: bash /tmp/dcos_install.sh slave
+    shell: bash /tmp/dcos/dcos_install.sh slave
