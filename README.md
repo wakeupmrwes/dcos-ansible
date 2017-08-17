@@ -1,1 +1,1 @@
-# `dcos-ansible` Documentation
+# Documentation for dcos-ansible
