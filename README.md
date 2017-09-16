@@ -16,10 +16,10 @@ running the community version of DC/OS.
 
   On Red Hat Enterprise Linux:
 
-  ```
-  sudo yum -y install epel-release
-  sudo yum -y install ansible
-  ```
+```
+      sudo yum -y install epel-release
+      sudo yum -y install ansible
+```
 
   On Windows:
 
