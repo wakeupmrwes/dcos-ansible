@@ -3,6 +3,8 @@
 This repo contains Ansible playbooks that can be used to deploy a DC/OS cluster
 running the community version of DC/OS.
 
+Forked from: https://bitbucket.org/pumphouse_p/dcos-ansible
+
 ## Dependencies
 
 * Ansible needs to be installed on the system that will drive the deployment
